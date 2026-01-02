@@ -1,0 +1,52 @@
+// #include <stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("enter number: ");
+//     scanf("%d", &n);
+//     int check = 1;
+//     for (int i = 2; i <=n/2; i++)
+//     {
+//         if (n % i == 0)
+//         {
+//             check = 0;
+//             break;
+//         }
+//     }
+//     if (n == 1)
+//     {
+//         printf("%d is neither prime or composite", n);
+//     }
+//     else if (check == 1)
+//     {
+//         printf("%d is prime", n);
+//     }
+//     else
+//        printf ("%d is composite", n);
+//     return 0;
+// }
+
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int check = 1;
+    for (int i = 2; i <= n / 2; i++)
+    {
+        if (n % i == 0)
+        {
+            check = 0;
+            break;
+        }
+    }
+    if (check == 1)
+    {
+        printf("prime number");
+    }
+    else
+        printf("composite");
+    if (n == 1)
+        printf("neither prime or composite");
+    return 0;
+}
